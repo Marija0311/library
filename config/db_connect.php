@@ -1,12 +1,10 @@
 
 <?php
+  error_reporting(E_ALL | E_STRICT);
+  ini_set("display_errors", true);
+  ini_set("log_errors", true);
 
-$host = 'localhost';
-$user = 'admin';
-$password = 'admin';
-$database = 'library';
-$conn = mysqli_connect($host, $user, $password, $database);
 
-if (!$conn) {
-    echo 'Connection error: ' . mysqli_connect_error();
-}
+  $conn = new MySqli('localhost', 'root','','library');
+  $conn->set_charset("utf8");
+ ?>
